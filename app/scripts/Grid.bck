@@ -1,0 +1,106 @@
+define ->
+	class window.Grid
+		cellSize = -> 20	
+		numberOfRows: 25
+		numberOfColumns: 25
+		scale: 1
+		canvas = -> null
+		context: null
+		pixels: 10
+
+		# constructor
+		constructor: ->
+			createCanvas()
+			#Init pixels as an 2d array (numbers of rows * numbers of columns)
+			@pixels = for x in [0...@numberOfRows]
+						for y in [0...@numberOfColumns]
+							null
+
+			#UIElements.initFields(this)
+			#Database.initDB()
+
+		# = Private
+		createCanvas = =>
+			require ['DatabaseHelper'], (DH) ->
+				@canvas = document.createElement 'canvas'
+				@canvas.id = DH.UUID()
+				@canvas.style.border = 'red 2px solid'
+
+				canvasContainer = document.getElementById 'container'
+				canvasContainer.appendChild @canvas
+
+				resizeCanvas()
+				createContext()
+				###
+				addListeners.call(@)
+				
+				
+				###
+		
+		resizeCanvas = =>
+			console.log (@cellSize)
+			canvas.height = @cellSize * numberOfRows()
+			canvas.width = cellSize() * numberOfColumns()
+
+		createContext = =>
+			@context = canvas.getContext '2d'
+			#@draw()
+			
+		addListeners = =>
+			require ['Pen'], (Pen) ->
+				@canvas.addEventListener 'mousedown', (e) => 
+					Pen.inUse = true
+					Pen.draw(this, e)
+
+				@canvas.addEventListener 'mousemove', (e) => 
+					return unless Pen.inUse
+					Pen.draw(this, e)
+
+				@canvas.addEventListener 'mouseup', ->
+					Pen.inUse = false
+
+		draw = => 
+			@canvas.width = @canvas.width
+			@context.scale(@scale, @scale)
+			# hack around before I figure out the problem with the next line
+			
+			#@context.clearRect(0,0, @canvas.width, @canvas.height)
+			@drawHorizontalLines x for x in [0..@canvas.width] by @cellSize
+			@drawVerticalLines y for y in [0..@canvas.height] by @cellSize
+			@context.strokeStyle = '#aaa'
+			@context.stroke()
+
+
+		# : Public		
+		redraw: =>
+			@draw()
+			@drawExistingPixels()
+
+		drawExistingPixels: =>
+			for columns, x in @pixels
+				for color, y in columns when color isnt null
+					pixel = new Pixel(x, y, color)
+					Pen.drawExisting pixel, this
+
+		drawHorizontalLines: (x) =>
+			@context.moveTo(x, 0)
+			@context.lineTo(x, @canvas.width)
+			
+		drawVerticalLines: (y) => 	
+			@context.moveTo(0, y)
+			@context.lineTo(@canvas.height, y)
+
+		saveDrawnPixel: (pixel) =>
+			@pixels[pixel.x / @cellSize][pixel.y  / @cellSize] = pixel.color
+
+		increaseScale: =>
+			@scale += 0.5
+			#@cellSize *= 0.5
+			#@resizeCanvas()
+			@redraw()
+
+		decreaseScale: =>
+			@scale -= 0.5
+			#@cellSize /= 0.5
+			#@resizeCanvas()
+			@redraw()

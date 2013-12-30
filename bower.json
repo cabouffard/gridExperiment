@@ -1,0 +1,22 @@
+{
+  "name": "grid",
+  "version": "0.0.0",
+  "authors": [
+    "Charles-Andre Bouffard <cabouffard@gmail.com>"
+  ],
+  "description": "gridExperiment",
+  "license": "MIT",
+  "homepage": "http://github.com/cabouffard",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jade": "~1.0.0",
+    "coffee-script": "~1.6.3"
+  }
+}
