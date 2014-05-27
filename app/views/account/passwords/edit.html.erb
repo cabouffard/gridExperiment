@@ -1,0 +1,19 @@
+<header class="page-header">
+  <div class="pull-right">
+    <%= link_to t("devise.account.passwords.account_settings"), edit_user_registration_path, class: "btn btn-default" %>
+  </div>
+  <h1><%= t("devise.account.passwords.title") %></h1>
+</header>
+
+<%= simple_form_for @user, url: account_password_path, html: { method: :put } do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :new_password, autocomplete: "off", autofocus: true %>
+  <%= f.input :confirm_new_password, autocomplete: "off" %>
+  <%= f.input :current_password, hint: t("hints.current_password") %>
+
+  <hr/>
+
+  <div>
+    <%= f.button :button, t("devise.account.passwords.submit"), class: "btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+ENV["RAILS_ENV"] = "test"
+require File.expand_path("../../config/environment", __FILE__)
+require "rails/test_help"
+require "minitest/rails"
+
+class ActiveSupport::TestCase
+  ActiveRecord::Migration.check_pending!
+end
+
+class ActionController::TestCase
+  ActiveRecord::Migration.check_pending!
+  include Devise::TestHelpers
+  include FactoryGirl::Syntax::Methods
+end

@@ -1,0 +1,95 @@
+fr:
+  general:
+    confirm_delete: "Êtes-vous vraiment sûr de vouloir supprimer cette entrée?"
+    confirm_send: "Ce courriel a déjà été envoyé, êtes-vous vraiment sûr de vouloir le réenvoyer?"
+    save: "Sauvegarder"
+    create: "Ajouter"
+    edit: "Modifier"
+    delete: "Supprimer"
+    please_select: "Veuillez sélectionner"
+    none: "Aucun"
+    type: "Type"
+    return: "Retour"
+
+  locale_update: "English"
+
+  navbar:
+    nav:
+    user:
+      account_settings: "Mon compte"
+      signin: "Se connecter"
+      signout: "Se déconnecter"
+
+  # Authentification
+  devise:
+    sessions:
+      new:
+        title: "Identification"
+        remember_me: "Se souvenir de moi?"
+        submit: "Se connecter"
+      signed_in: ""
+      signed_out: ""
+      already_signed_out: ""
+    passwords:
+      new:
+        title: "Mot de passe oublié?"
+        submit: "Envoyer les instructions"
+      edit:
+        title: "Changer votre mot de passe"
+        submit: "Changer mon mot de passe"
+    registrations:
+      new:
+        title: "Inscription"
+        submit: "S'inscrire"
+      edit:
+        title: "Mon compte"
+        personal_info: "Information personnelle"
+        company_info: "Information d'entreprise"
+        change_password: "Modifier mon mot de passe"
+        unconfirmed_email: "En attente de confirmation pour : %{email}"
+        submit: "Mettre à jour"
+    confirmations:
+      new:
+        title: "Instructions de confirmation"
+        submit: "Renvoyer"
+    unlocks:
+      new:
+        title: "Renvoyer les instructions de déverrouillage"
+        submit: "Renvoyer"
+    account:
+      passwords:
+        title: "Modifier mon mot de passe"
+        submit: "Mettre à jour"
+        account_settings: "Mon compte"
+    links:
+      signin: "Se connecter"
+      signup: "S'inscrire"
+      forgot_password: "Mot de passe oublié?"
+      confirmation: "Vous n'avez pas reçu les instructions de confirmation?"
+      unlock: "Vous n'avez pas reçu les instructions de déverrouillage?"
+    mailer:
+      hi: "Bonjour %{email}!"
+      welcome: "Bienvenue %{email}!"
+      confirmation:
+        request: "Vous pouvez confirmer votre compte en cliquant sur le lien ci-dessous :"
+        action: "Confirmer mon compte"
+      unlock:
+        info: "Votre compte a été verrouillé en raison d'un nombre excessif de tentatives de connexion."
+        request: "Cliquez sur le lien ci-dessous pour déverrouiller votre compte :"
+        action: "Déverrouiller mon compte"
+      reset:
+        request: "Quelqu'un a fait une demande pour changer votre mot de passe. Vous pouvez le faire via le lien ci-dessous :"
+        action: "Changer mon mot de passe"
+        note_1: "Si vous n'avez pas fait cette demande, veuillez ignorer ce courriel."
+        note_2: "Votre mot de passe ne changera pas jusqu'à ce que vous accédez au lien ci-dessus et en créez un nouveau."
+
+  # Datetime formats
+  time:
+    formats:
+      short: "%e/%m/%Y"
+      medium: "%e %B %Y"
+      medium_date: "%e %B"
+      medium_datetime: "%e %B, %H:%M"
+      long: "%e %B %Y, %H:%M"
+      datetime: "%e-%m-%Y, %H:%M"
+      time: "%H:%M"

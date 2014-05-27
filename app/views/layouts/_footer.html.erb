@@ -1,0 +1,5 @@
+<div class="pull-right">
+  <%= link_to t("locale_update"), update_locale_path(I18n.locale == :en ? "fr" : "en"), method: :put, class: "btn btn-default btn-sm" %>
+</div>
+
+<%= "Copyright #{Date.today.year}" %>

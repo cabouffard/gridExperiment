@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render "layouts/head" %>
+</head>
+<body data-env="<%= Rails.env %>">
+
+  <%= render "layouts/analytics" if Rails.env == "production" %>
+
+  <header class="app-nav">
+    <%= render "layouts/app_nav" %>
+  </header>
+
+  <div class="app-container">
+    <div class="app-main">
+      <div class="app-flash">
+        <%= render "layouts/flash" %>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="app-content">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-footer">
+      <%= render "layouts/footer" %>
+    </div>
+  </div>
+
+</body>
+</html>

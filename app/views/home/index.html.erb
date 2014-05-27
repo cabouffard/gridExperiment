@@ -1,0 +1,38 @@
+<% content_for :aside do %>
+  <nav>
+    <div class="nav-title"><%= "General" %></div>
+    <ul class="nav">
+      <li class="active">
+        <%= link_to icon_and_text("fa-dashboard fa-fw", "&nbsp;Welcome"), root_path %>
+      </li>
+    </ul>
+  </nav>
+<% end %>
+
+<header class="page-header">
+  <h1>Welcome</h1>
+</header>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Nulla sollicitudin auctor velit.
+  Phasellus aliquet porta lacus, ut bibendum arcu tincidunt quis.
+  Duis ornare molestie vulputate. Nullam vel enim feugiat, scelerisque sem id, facilisis massa.
+</p>
+<div class="alert alert-full alert-info">
+  <div class="media">
+    <div class="pull-left">
+      <i class="icon-info-sign"></i>
+    </div>
+    <div class="media-body">
+      <h3>Welcome to HR</h3>
+      <p>
+        Heads up! This alert needs your attention, but it's not super important.
+      </p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 20%;">
+          <span class="sr-only">20%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

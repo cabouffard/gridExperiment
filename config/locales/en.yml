@@ -1,0 +1,95 @@
+en:
+  general:
+    confirm_delete: "Are you really sure you want to delete this item?"
+    confirm_send: "This email has already been sent. Are you really sure you want to resend it?"
+    save: "Save"
+    create: "Add"
+    edit: "Update"
+    delete: "Delete"
+    please_select: "Please select"
+    none: "None"
+    type: "Type"
+    return: "Back"
+
+  locale_update: "Français"
+
+  navbar:
+    nav:
+    user:
+      account_settings: "My account"
+      signin: "Sign in"
+      signout: "Sign out"
+
+  # Authentification
+  devise:
+    sessions:
+      new:
+        title: "Sign in"
+        remember_me: "Remember me?"
+        submit: "Sign in"
+      signed_in: ""
+      signed_out: ""
+      already_signed_out: ""
+    passwords:
+      new:
+        title: "Forgot password?"
+        submit: "Send instructions"
+      edit:
+        title: "Change your password"
+        submit: "Change my password"
+    registrations:
+      new:
+        title: "Registration"
+        submit: "Sign up"
+      edit:
+        title: "My account"
+        personal_info: "Personal information"
+        company_info: "Company information"
+        change_password: "Edit my password"
+        unconfirmed_emaia: "Waiting for confirmation : %{email}"
+        submit: "Update"
+    confirmations:
+      new:
+        title: "Confirmation instructions"
+        submit: "Re-submit"
+    unlocks:
+      new:
+        title: "Re-submit unlock instructions"
+        submit: "Re-submit"
+    account:
+      passwords:
+        title: "Edit my password"
+        submit: "Update"
+        account_settings: "My account"
+    links:
+      signin: "Sign in"
+      signup: "Sign up"
+      forgot_password: "Forgot password?"
+      confirmation: "You did not receive confirmation instructions?"
+      unlock: "You did not receive unlock instructions?"
+    mailer:
+      hi: "Hi %{email}!"
+      welcome: "Welcome %{email}!"
+      confirmation:
+        request: "You can confirm your account by clicking on the link below :"
+        action: "Confirm my account"
+      unlock:
+        info: "Your account has been locked because of too many login attempts."
+        request: "Click the link below to unlock your account :"
+        action: "Unlock my account"
+      reset:
+        request: "Someone made ​​a request to change your password. You can do so via the link below :"
+        action: "Edit my password"
+        note_1: "If you did not make this request, please ignore this email."
+        note_2: "Your password will not change until you go to the link above and create a new one."
+
+  # Datetime formats
+  time:
+    formats:
+      short: "%e/%m/%Y"
+      medium: "%B %e %Y"
+      medium_date: "%B %e"
+      medium_datetime: "%B %e, %H:%M"
+      long: "%B %e %Y, %H:%M"
+      datetime: "%e-%m-%Y, %H:%M"
+      time: "%H:%M"

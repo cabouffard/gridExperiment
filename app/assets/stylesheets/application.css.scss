@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+@import "bootstrap/variables";
+@import "variables/shared";
+@import "variables/application";
+@import "shared";
+
+// Layout
+
+$app-nav-height: 115px;
+
+.app-nav {
+  height: $app-nav-height;
+  padding-top: 15px;
+  background: $navbar-default-bg;
+
+  > .navbar {
+    @include container-fixed();
+    max-width: $container-lg;
+    border: 0;
+  }
+}
+
+.app-nav-flush {
+  height: $app-nav-height - 30px;
+}
+
+.app-nav-user {
+  display: inline-block;
+  max-width: 150px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.app-main {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  border: 1px solid #d8dcea;
+  border-top: 0;
+  overflow: hidden;
+}
+
+.app-container {
+  @include container-fixed();
+  max-width: $container-lg;
+  margin-top: -35px;
+}
+
+.app-container-small {
+  margin-top: 30px;
+  max-width: $container-sm;
+}
+
+.app-flash {
+  position: relative;
+
+  .alert {
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: $font-size-base + 1;
+  }
+}
+
+.app-aside {
+  padding: 15px;
+
+  @media (min-width: $screen-sm) {
+    background: #fdfdfe;
+    border-right: 1px solid #d8dcea;
+    box-shadow: -1px 0 2px rgba(0, 0, 0, 0.05) inset;
+    min-height: 500px;
+  }
+}
+
+.app-content {
+  padding: 0 $grid-gutter-width $grid-gutter-width $grid-gutter-width;
+}
+
+.app-content-with-aside {
+  @media (min-width: $screen-sm) {
+    padding: 0 $grid-gutter-width $grid-gutter-width 0;
+  }
+}
+
+.app-footer {
+  @include container-fixed();
+  max-width: $container-lg;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: #9b9ba7;
+}

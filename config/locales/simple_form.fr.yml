@@ -1,0 +1,53 @@
+fr:
+  simple_form:
+    "yes": "Oui"
+    "no": "Non"
+    required:
+      text: "Requis"
+      mark: "*"
+
+    error_notification:
+      default_message: "Veuillez corriger les erreurs dans le formulaire ci-dessous."
+
+    prompts: &prompts
+
+    hints: &hints
+      current_password: "(nous avons besoin de votre mot de passe actuel pour confirmer vos modifications)"
+
+    labels:
+      defaults: &labels
+        first_name: "Prénom"
+        last_name: "Nom"
+        address: "Adresse civique"
+        email: "Courriel"
+        phone: "Téléphone"
+        street: "Adresse civique"
+        city: "Sherbrooke"
+        province: "Province"
+        country: "Pays"
+        postal_code: "Code postal"
+        password: "Mot de passe"
+        password_confirmation: "Confirmer le mot de passe"
+        new_password: "Nouveau mot de passe"
+        confirm_new_password: "Confirmer le nouveau mot de passe"
+        current_password: "Mot de passe actuel"
+        confirmation_token: "Jeton de confirmation"
+        patient: "Patient"
+        created_at: "Date de création"
+        description: "Description"
+        status: "Statut"
+        actions: "Actions"
+        body: "Message"
+        logo: "Logo"
+        name: "Nom"
+        title: "Titre"
+        picture: "Image"
+        notes: "Notes"
+
+    placeholders:
+      defaults:
+        << : *labels
+
+  labels: *labels
+  prompts: *prompts
+  hints: *hints

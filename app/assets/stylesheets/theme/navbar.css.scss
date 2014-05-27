@@ -1,0 +1,16 @@
+.navbar-brand {
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  font-size: $font-size-xlarge;
+}
+
+.navbar-nav {
+  font-family: 'Proxima Nova';
+  font-weight: bold;
+}
+
+.navbar-form {
+  input[type="search"] {
+    border-radius: 50px;
+  }
+}

@@ -1,0 +1,53 @@
+en:
+  simple_form:
+    "yes": "Yes"
+    "no": "No"
+    required:
+      text: "Required"
+      mark: "*"
+
+    error_notification:
+      default_message: "Please review the problems in the form below."
+
+    prompts: &prompts
+
+    hints: &hints
+      current_password: "(we need your current password to confirm your changes)"
+
+
+    labels:
+      defaults: &labels
+        first_name: "First name"
+        last_name: "Last name"
+        address: "Address"
+        email: "Email"
+        phone: "Phone"
+        street: "Street address"
+        city: "City"
+        province: "Province"
+        country: "Country"
+        postal_code: "Postal code"
+        password: "Password"
+        password_confirmation: "Confirm password"
+        new_password: "New password"
+        confirm_new_password: "Confirm new password"
+        current_password: "Current password"
+        confirmation_token: "Confirmation token"
+        created_at: "Created at"
+        description: "Description"
+        status: "Status"
+        actions: "Actions"
+        body: "Message"
+        logo: "Logo"
+        name: "Name"
+        title: "Title"
+        picture: "Picture"
+        notes: "Notes"
+
+    placeholders:
+      defaults:
+        << : *labels
+
+  labels: *labels
+  prompts: *prompts
+  hints: *hints
