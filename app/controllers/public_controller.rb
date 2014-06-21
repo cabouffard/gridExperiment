@@ -1,5 +1,4 @@
 class PublicController < ApplicationController
-  skip_before_filter :authenticate_user!
   layout "public"
 
   def set_locale

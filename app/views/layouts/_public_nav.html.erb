@@ -15,30 +15,8 @@
       <li><a href="#">Pricing</a></li>
     </ul>
 
-    <% if !user_signed_in? %>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="<%= new_session_path User %>">Sign in</a></li>
-      </ul>
-    <% else %>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <span class="app-nav-user">
-              <%= current_user.email %>
-            </span>
-            <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <%= link_to "Account settings", edit_user_registration_path(locale: nil) %>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <%= link_to "Sign out", destroy_user_session_path(locale: nil), method: :delete %>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    <% end %>
+    <ul class="nav navbar-nav navbar-right">
+      <li>Sign in</li>
+    </ul>
   </div>
 </nav>
